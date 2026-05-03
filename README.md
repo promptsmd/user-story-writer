@@ -7,8 +7,8 @@ Este repositório contém um prompt para um agente de IA especializado em criar 
 - **Coleta da Tríade**: O agente solicita as três informações essenciais de uma vez (COMO, QUERO, PARA), validando se cada campo é específico o suficiente antes de gerar.
 - **Geração com Qualidade**: Gera uma User Story completa com Descrição, Contexto, Regras de Negócio (RN), Comportamento Esperado (CT), Critérios de Aceitação (CA), Estimativa, Riscos (RIS), Dependências (DEP), Sugestões de Testes e Definição de Pronto (DoD).
 - **Siglas Padronizadas**: Todos os itens das seções são prefixados com sigla sequencial e nome descritivo (ex: `RN1 — Nome`, `CA1 — Nome`, `RIS1 — Nome`).
-- **Revisão e Iteração**: Apresenta a US gerada, permite ajustes pontuais e só salva após aprovação do usuário.
-- **Arquivo de Saída**: Salva a User Story em um arquivo `.md` na pasta `outputs/`, nomeado em formato slug (ex: `filtrar-visualizar-idade-funcionarios-cadastro.md`).
+- **Revisão e Iteração**: Apresenta a US gerada e **sempre** pergunta: *"Gostaria de revisar algum ponto ou posso salvar na pasta `outputs/`?"* — permite ajustes pontuais e só salva após aprovação do usuário.
+- **Arquivo de Saída**: Salva a User Story em um arquivo `.md` na pasta `outputs/`, nomeado em formato slug (ex: `filtrar-visualizar-idade-funcionarios-cadastro.md`). A pasta é criada automaticamente caso não exista.
 
 ## Como Usar
 
@@ -21,9 +21,9 @@ Este repositório contém um prompt para um agente de IA especializado em criar 
    - **QUERO**: Ação específica (ex: "filtrar funcionários por idade").
    - **PARA**: Valor de negócio (ex: "identificar quais estão próximos de se aposentar").
 
-4. **Revisão**: O agente apresenta a US gerada e pergunta se há ajustes antes de salvar.
+4. **Revisão**: O agente apresenta a US gerada e **sempre** pergunta: *"Gostaria de revisar algum ponto ou posso salvar na pasta `outputs/`?"*
 
-5. **Aprovação**: Confirme ou solicite alterações. Ao aprovar, o arquivo é salvo em `outputs/`.
+5. **Aprovação**: Confirme ou solicite alterações. Ao aprovar, o arquivo é salvo em `outputs/` (a pasta é criada automaticamente se não existir) e o agente confirma o caminho do arquivo salvo.
 
 ## Exemplo de Uso
 
@@ -91,7 +91,7 @@ Como [COMO], quero [QUERO] para [PARA].
 ## Pré-requisitos
 
 - Ambiente de IA compatível com prompts customizados (ex: GitHub Copilot no VS Code).
-- Pasta `outputs/` criada no diretório do projeto.
+- A pasta `outputs/` é criada automaticamente pelo agente caso não exista.
 
 ## Contribuição
 
