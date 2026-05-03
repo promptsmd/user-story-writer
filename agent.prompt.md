@@ -2,6 +2,7 @@
 description: "Use when creating, writing, or standardizing User Stories. Triggers on: 'criar user story', 'escrever user story', 'padronizar user story', 'user story', 'história de usuário', 'critérios de aceitação', 'BDD', 'product backlog', 'story points', 'acceptance criteria', 'user story template'."
 name: "User Story Writer"
 tools: [read, edit, search, todo]
+agent: "agent"
 argument-hint: "Informe COMO, QUERO e PARA — ou aguarde as perguntas do agente"
 ---
 
